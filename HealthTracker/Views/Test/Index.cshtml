@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Test>
+
+<head>
+        <link rel="stylesheet" href="StyleSheet.css">
+</head>
+
+
+<h2>Tests</h2>
+<table class="table">
+                                            <!-- The Headers-->
+    <tr>
+        <th>Number</th>
+        <th class="center">Date</th>
+        
+        <th class="twoLineHeader">CBC<br>WBC</th>
+        <th class="twoLineHeader">CBC<br>RBC</th>
+        <th class="twoLineHeader">CBC<br>HGB</th>
+        <th class="twoLineHeader">CBC<br>HCT</th>
+        <th class="twoLineHeader">CBC<br>MCV</th>
+        <th class="twoLineHeader">CBC<br>MCH</th>
+        <th class="twoLineHeader">CBC<br>MCHC</th>
+        <th class="twoLineHeader">CBC<br>RDW%</th>
+        <th class="twoLineHeader">CBC<br>PLT</th>
+        <th class="twoLineHeader">CBC<br>MPV</th>
+        <th class="twoLineHeader">CBC<br>Neutrophils<br>%</th>
+        <th class="twoLineHeader">CBC<br>Neutrophils<br>Absolute</th>
+        <th class="twoLineHeader">CBC<br>Lymphocytes<br>%</th>
+        <th class="twoLineHeader">CBC<br>Lymphocytes<br>Absolute</th>
+        <th class="twoLineHeader">CBC<br>Monocytes<br>%</th>
+        <th class="twoLineHeader">CBC<br>Monocytes<br>Absolute</th>
+        <th class="twoLineHeader">CBC<br>Eosinophils<br>%</th>
+        <th class="twoLineHeader">CBC<br>Eosinophils<br>Absolute</th>
+        <th class="twoLineHeader">CBC<br>Basophils<br>%</th>
+        <th class="twoLineHeader">CBC<br>Basophils<br>Absolute</th>
+        <th class="twoLineHeader">CMP<br>Glucose</th>
+        <th class="twoLineHeader">CMP<br>BUN</th>
+        <th class="twoLineHeader">CMP<br>Creatinine</th>
+        <th class="twoLineHeader">CBC<br>BUN/Creatinine<br>Ratio</th>
+        <th class="twoLineHeader">CBC<br>Sodium</th>
+        <th class="twoLineHeader">CBC<br>Potassium</th>
+        <th class="twoLineHeader">CBC<br>Chloride</th>
+        <th class="twoLineHeader">CMP<br>CO2</th>
+        <th class="twoLineHeader">CMP<br>Calcium</th>
+        <th class="twoLineHeader">CMP<br>Total<br>Protein</th>
+        <th class="twoLineHeader">CMP<br>Albumin</th>
+        <th class="twoLineHeader">CMP<br>Globulin.Serum<br>Qn.Calc.G/DI</th>
+        <th class="twoLineHeader">CMP<br>A/G Ratio</th>
+        <th class="twoLineHeader">CMP<br>Total<br>Bilirubin</th>
+        <th class="twoLineHeader">CMP<br>Alkaline<br>Phosphatase</th>
+        <th class="twoLineHeader">CMP<br>AST</th>
+        <th class="twoLineHeader">CMP<br>ALT</th>
+        <th class="twoLineHeader">Lipid Panel<br>Cholesterol</th>
+        <th class="twoLineHeader">Lipid Panel<br>Triglycerides</th>
+        <th class="twoLineHeader">Lipid Panel<br>HDL</th>
+        <th class="twoLineHeader">Lipid Panel<br>VLDL</th>
+        <th class="twoLineHeader">Lipid Panel<br>LDL</th>
+        <th class="twoLineHeader">Lipid Panel<br>Cholesterol<br>HDL Ratio</th>
+        <th class="twoLineHeader">Lipid Panel<br>Cholesterol<br>Non-HDL</th>
+        <th class="center">Magnesium</th>
+        <th class="center">Tacrolimus</th>
+        <th class="center">Uric Acid Serum</th>
+        <th class="center">Phosphorus Serum</th>
+        <th class="center">PTH Intact</th>
+        <th class="center">Vitamin D</th>
+        <th class="center">Cystatin C<br>w/EstGFR Serum</th>
+        <th class="center">Free T4</th>
+        <th class="center">TSH</th>
+        
+    </tr>
+
+        
+    @foreach (var test in @Model)
+    {
+        <tr>
+           
+            <td><a href=/Test/ViewTest/@test.Number>@test.Number</a></td>
+            <td>@test.Date</td>
+            <td id="center">@test.CBC_WBC</td>
+            <td id="center">@test.CBC_RBC</td>
+            <td id="center">@test.CBC_HGB</td>              <!-- The Data-->
+            <td id="center">@test.CBC_HCT</td>
+            <td id="center">@test.CBC_MCV</td>
+            <td id="center">@test.CBC_MCH</td>
+            <td id="center">@test.CBC_MCHC</td>
+            <td id="center">@test.CBC_RDW_percent</td>
+            <td id="center">@test.CBC_PLT</td>
+            <td id="center">@test.CBC_MPV</td>
+            <td id="center">@test.CBC_Neutrophils_percent</td>
+            <td id="center">@test.CBC_Neutrophils_Absolute</td>
+            <td id="center">@test.CBC_Lymphocytes_percent</td>
+            <td id="center">@test.CBC_Lymphocytes_Absolute</td>
+            <td id="center">@test.CBC_MonocytesAuto_percent</td>
+            <td id="center">@test.CBC_Monocytes_Absolute</td>
+            <td id="center">@test.CBC_Eosinophils_percent</td>
+            <td id="center">@test.CBC_Eosinophils_Absolute</td>
+            <td id="center">@test.CBC_Basophils_percent</td>
+            <td id="center">@test.CBC_Basophils_Absolute</td>
+            <td id="center">@test.CMP_Glucose</td>
+            <td id="center">@test.CMP_BUN</td>
+            <td id="center">@test.CMP_Creatinine</td>
+            <td id="center">@test.CMP_BUN_CreatinineRatio</td>
+            <td id="center">@test.CMP_Sodium</td>
+            <td id="center">@test.CMP_Potassium</td>
+            <td id="center">@test.CMP_Choloride</td>
+            <td id="center">@test.CMP_CO2</td>
+            <td id="center">@test.CMP_Calcium</td>
+            <td id="center">@test.CMP_Protein_Total</td>
+            <td id="center">@test.CMP_Albumin</td>
+            <td id="center">@test.CMP_Globulin_Serum_Qn_Calc</td>
+            <td id="center">@test.CMP_A_G_Ratio</td>
+            <td id="center">@test.CMP_Bilirubin_Total</td>
+            <td id="center">@test.CMP_AlkalinePhosphatase</td>
+            <td id="center">@test.CMP_AST</td>
+            <td id="center">@test.CMP_ALT</td>
+            <td id="center">@test.LipidPanel_Cholesterol</td>
+            <td id="center">@test.LipidPanel_Triglycerides</td>
+            <td id="center">@test.LipidPanel_HDL</td>
+            <td id="center">@test.LipidPanel_VLDL</td>
+            <td id="center">@test.LipidPanel_LDL</td>
+            <td id="center">@test.LipidPanel_CholesterolHDLRatio</td>
+            <td id="center">@test.LipidPanel_NonHDLCholesterol</td>
+            <td id="center">@test.Magnesium</td>
+            <td id="center">@test.Tacrolimus</td>
+            <td id="center">@test.Uric_Acid_Serum</td>
+            <td id="center">@test.Phosphorus_Serum</td>
+            <td id="center">@test.PTH_Intact</td>
+            <td id="center">@test.VitaminD</td>
+            <td id="center">@test.Cystatin_C_w_EstGFR_Serum</td>
+            <td id="center">@test.FreeT4</td>
+            <td id="center">@test.TSH</td>
+            <td id="center">@test.HgB_A1C</td>
+        </tr>
+    }
+</table>
+
+
