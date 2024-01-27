@@ -20,7 +20,6 @@ namespace HealthTracker.Controllers
             var test = _testRepository.GetTest(id);
             return View(test);
         }
-
         
     }
 }
