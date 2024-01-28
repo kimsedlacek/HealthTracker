@@ -1,0 +1,16 @@
+﻿@model Test
+
+<h2>Update @Model.Date</h2>
+
+@using (Html.BeginForm("UpdateTestToDatabase", "Test", FormMethod.Post))
+{
+    <label asp-for="CBC_WBC" class="control-label">CBC_WBC</label>
+    <input asp-for="CBC_WBC" type="text" class="form-control" />
+
+    <label asp-for="CBC_RBC" class="control-label">CBC_RBC</label>
+    <input asp-for="CBC_RBC" type="text" class="form-control" />
+
+    <input type="submit" value="Update Test" class="btn btn-primary" />
+    <input asp-for="Number" type="hidden" />
+
+}

@@ -1,0 +1,48 @@
+﻿@model Test
+
+<h2>Log New Test Results</h2>
+
+@using (Html.BeginForm("InsertTestToDatabase", "Test", FormMethod.Post))
+
+{
+    <input asp-for="Number" type="hidden" value=""/>
+    
+   // <div class="form-group">
+    <label asp-for="Date" class="control-label">Date</label>
+    <input type="text" name="Date" class="form-control" value=""/>
+   // </div>
+    <label asp-for="CBC_WBC" class="control-label">CBC_WBC</label>
+    <input type="number"  name="CBC_WBC" class="form-control" />
+
+    <div class="form-group">
+        <label for="">Select a Category</label>
+        <select class="form-control" name="CBC_RBC" value="">
+            @foreach (var cat in Model.Categories)
+            {
+                <option value="@cat.CBC_RBC">@cat.CBC_RBC @cat.Date</option>
+            }
+        </select>
+    </div>
+
+    <input type="submit" value="Create Test" class="btn btn-primary" />
+}
+
+
+
+
+
+
+    <div class="form-group">
+        <label class="control-label">Choose Test Type:</label>
+        <button type="submit" name="TestType" value="CBC" class="btn btn-primary">CBC</button>
+        <button type="submit" name="TestType" value="CMP" class="btn btn-primary">CMP</button>
+        <button type="submit" name="TestType" value="Lipid Panel" class="btn btn-primary">Lipid Panel</button>
+        <button type="submit" name="TestType" value="Other" class="btn btn-primary">Other</button>
+    </div>
+}
+
+
+
+
+
+

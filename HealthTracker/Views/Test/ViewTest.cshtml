@@ -1,128 +1,142 @@
 ﻿@model Test
 
-<h3>@Model.Number</h3>
-<table class="table">
+<h3>@Model.Date</h3>    
+
+<!-- The Headers for the Tests when viewed as one single test-->
+
+ <table class="table">
     <tr>
-        <th>Number</th>
-        <th>Date</th>
-        <th>CBC_WBC</th>             <!-- The Headers-->
-        <th>CBC_RBC</th>
-        <th>CBC_HGB</th>
-        <th>CBC_HCT</th>
-        <th>CBC_MCV</th>
-        <th>CBC_MCH</th>
-        <th>CBC_MCHC</th>
-        <th>CBC_RDW_percent</th>
-        <th>CBC_PLT</th>
-        <th>CBC_MPV</th>
-        <th>CBC_Neutrophils_percent</th>
-        <th>CBC_Neutrophils_Absolute</th>
-        <th>CBC_Lymphocytes_percent</th>
-        <th>CBC_Lymphocytes_Absolute</th>
-        <th>CBC_MonocytesAuto_percent</th>
-        <th>CBC_Monocytes_Absolute</th>
-        <th>CBC_Eosinophils_percent</th>
-        <th>CBC_Eosinophils_Absolute</th>
-        <th>CBC_Basophils_percent</th>
-        <th>CBC_Basophils_Absolute</th>
-        <th>CMP_Glucose</th>
-        <th>CMP_BUN</th>
-        <th>CMP_Creatinine</th>
-        <th>CMP_BUN_CreatinineRatio</th>
-        <th>CMP_Sodium</th>
-        <th>CMP_Potassium</th>
-        <th>CMP_Chloride</th>
-        <th>CMP_CO2</th>
-        <th>CBMP_Calcium</th>
-        <th>CMP_Protein_Total</th>
-        <th>CMP_Albumin</th>
-        <th>CMP_Globulin_Serum_Qn_Calc</th>
-        <th>CMP_A_G_Ratio</th>
-        <th>CMP_Bilirubin_Total</th>
-        <th>CMP_AlkalinePhosphatase</th>
-        <th>CMP_AST</th>
-        <th>CMP_ALT</th>
-        <th>LipidPanel_Cholesterol</th>
-        <th>LipidPanel_Triglycerides</th>
-        <th>LipidPanel_HDL</th>
-        <th>LipidPanel_VLDL</th>
-        <th>LipidPanel_LDL</th>
-        <th>LipidPanel_CholesterolHDLRatio</th>
-        <th>LipidPanel_NonHDLCholesterol</th>
-        <th>Magnesium</th>
-        <th>Tacrolimus</th>
-        <th>Uric_Acid_Serum</th>
-        <th>Phosphorus_Serum</th>
-        <th>PTH_Intact</th>
-        <th>VitaminD</th>
-        <th>Cystatin_C_w_EstGFR_Serum</th>
-        <th>Free_T4</th>
-        <th>TSH</th>
+        <th class="text-left align-bottom">Date</th>
+        <th class="text-center align-bottom">Number</th>
+
+        <th class="twoLineHeader align-bottom">CBC<br>WBC</th>
+        <th class="twoLineHeader align-bottom">CBC<br>RBC</th>
+        <th class="twoLineHeader align-bottom">CBC<br>HGB</th>
+        <th class="twoLineHeader align-bottom">CBC<br>HCT</th>
+        <th class="twoLineHeader align-bottom">CBC<br>MCV</th>
+        <th class="twoLineHeader align-bottom">CBC<br>MCH</th>
+        <th class="twoLineHeader align-bottom">CBC<br>MCHC</th>
+        <th class="twoLineHeader align-bottom">CBC<br>RDW%</th>
+        <th class="twoLineHeader align-bottom">CBC<br>PLT</th>
+        <th class="twoLineHeader align-bottom">CBC<br>MPV</th>
+        <th class="twoLineHeader align-bottom">CBC<br>%<br>Neutrophils</th>
+        <th class="twoLineHeader align-bottom">CBC<br>Absolute<br>Neutrophils</th>
+        <th class="twoLineHeader align-bottom">CBC<br>%<br>Lymphocytes</th>
+        <th class="twoLineHeader align-bottom">CBC<br>Absolute<br>Lymphocytes</th>
+        <th class="twoLineHeader align-bottom">CBC<br>%<br>Monocytes</th>
+        <th class="twoLineHeader align-bottom">CBC<br>Absolute<br>Monocytes</th>
+        <th class="twoLineHeader align-bottom">CBC<br>%<br>Eosinophils</th>
+        <th class="twoLineHeader align-bottom">CBC<br>Absolute<br>Eosinophils</th>
+        <th class="twoLineHeader align-bottom">CBC<br>%<br>Basophils</th>
+        <th class="twoLineHeader align-bottom">CBC<br>Absolute<br>Basophils</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Glucose</th>
+        <th class="twoLineHeader align-bottom">CMP<br>BUN</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Creatinine</th>
+        <th class="twoLineHeader align-bottom">CMP<br>BUN/Creat<br>Ratio</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Sodium</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Potassium</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Chloride</th>
+        <th class="twoLineHeader align-bottom">CMP<br>CO2</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Calcium</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Total<br>Protein</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Albumin</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Glob.SerumQn<br>.Calc.G/DI</th>
+        <th class="twoLineHeader align-bottom">CMP<br>A/G Ratio</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Total<br>Bilirubin</th>
+        <th class="twoLineHeader align-bottom">CMP<br>Alkaline<br>Phosphatase</th>
+        <th class="twoLineHeader align-bottom">CMP<br>AST</th>
+        <th class="twoLineHeader align-bottom">CMP<br>ALT</th>
+        <th class="twoLineHeader align-bottom">Lipid Panel<br>Cholesterol</th>
+        <th class="twoLineHeader align-bottom">Lipid Panel<br>Triglycerides</th>
+        <th class="text-center twoLineHeader align-bottom">Lipid Panel<br>HDL</th>
+        <th class="twoLineHeader align-bottom">Lipid Panel<br>VLDL</th>
+        <th class="twoLineHeader align-bottom">Lipid Panel<br>LDL</th>
+        <th class="twoLineHeader align-bottom">Lipid Panel<br>Cholesterol<br>HDL Ratio</th>
+        <th class="twoLineHeader align-bottom">Lipid Panel<br>Cholesterol<br>Non-HDL</th>
+        <th class="center align-bottom">Magnesium</th>
+        <th class="center align-bottom">Tacrolimus</th>
+        <th class="text-center align-bottom">Uric Acid Serum</th>
+        <th class="text-center align-bottom">Phosphorus Serum</th>
+        <th class="text-center align-bottom">PTH Intact</th>
+        <th class="text-center align-bottom">Vitamin D</th>
+        <th class="text-center align-bottom">Cystatin C<br>w/EstGFR Serum</th>
+        <th class="text-center align-bottom">Free T4</th>
+        <th class="center align-bottom">TSH</th>
+        <th class="text-center align-bottom">HgB A1C</th>
 
     </tr>
 
-
-    {
         <tr>
-            
-            <td>@Model.Number</td>
-            <td>@Model.Date</td>
-            <td>@Model.CBC_WBC</td>
-            <td>@Model.CBC_RBC</td>
-            <td>@Model.CBC_HGB</td>             
-            <td>@Model.CBC_HCT</td>
-            <td>@Model.CBC_MCV</td>
-            <td>@Model.CBC_MCH</td>
-            <td>@Model.CBC_MCHC</td>
-            <td>@Model.CBC_RDW_percent</td>
-            <td>@Model.CBC_PLT</td>
-            <td>@Model.CBC_MPV</td>
-            <td>@Model.CBC_Neutrophils_percent</td>
-            <td>@Model.CBC_Neutrophils_Absolute</td>
-            <td>@Model.CBC_Lymphocytes_percent</td>
-            <td>@Model.CBC_Lymphocytes_Absolute</td>
-            <td>@Model.CBC_MonocytesAuto_percent</td>
-            <td>@Model.CBC_Monocytes_Absolute</td>
-            <td>@Model.CBC_Eosinophils_percent</td>
-            <td>@Model.CBC_Eosinophils_Absolute</td>
-            <td>@Model.CBC_Basophils_percent</td>
-            <td>@Model.CBC_Basophils_Absolute</td>
-            <td>@Model.CMP_Glucose</td>
-            <td>@Model.CMP_BUN</td>
-            <td>@Model.CMP_Creatinine</td>
-            <td>@Model.CMP_BUN_CreatinineRatio</td>
-            <td>@Model.CMP_Sodium</td>
-            <td>@Model.CMP_Potassium</td>
-            <td>@Model.CMP_Chloride</td>
-            <td>@Model.CMP_CO2</td>
-            <td>@Model.CMP_Calcium</td>
-            <td>@Model.CMP_Protein_Total</td>
-            <td>@Model.CMP_Albumin</td>
-            <td>@Model.CMP_Globulin_Serum_Qn_Calc</td>
-            <td>@Model.CMP_A_G_Ratio</td>
-            <td>@Model.CMP_Bilirubin_Total</td>
-            <td>@Model.CMP_AlkalinePhosphatase</td>
-            <td>@Model.CMP_AST</td>
-            <td>@Model.CMP_ALT</td>
-            <td>@Model.LipidPanel_Cholesterol</td>
-            <td>@Model.LipidPanel_Triglycerides</td>
-            <td>@Model.LipidPanel_HDL</td>
-            <td>@Model.LipidPanel_VLDL</td>
-            <td>@Model.LipidPanel_LDL</td>
-            <td>@Model.LipidPanel_CholesterolHDLRatio</td>
-            <td>@Model.LipidPanel_NonHDLCholesterol</td>
-            <td>@Model.Magnesium</td>
-            <td>@Model.Tacrolimus</td>
-            <td>@Model.Uric_Acid_Serum</td>
-            <td>@Model.Phosphorus_Serum</td>
-            <td>@Model.PTH_Intact</td>
-            <td>@Model.VitaminD</td>
-            <td>@Model.Cystatin_C_w_EstGFR_Serum</td>
-            <td>@Model.FreeT4</td>
-            <td>@Model.TSH</td>
-            <td>@Model.HgB_A1C</td>
+        <td>@Model.Date</td>
+        <td>@Model.Number</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_WBC.HasValue ? Model.CBC_WBC.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_RBC.HasValue ? Model.CBC_RBC.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_HGB.HasValue ? Model.CBC_HGB.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_HCT.HasValue ? Model.CBC_HCT.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_MCV.HasValue ? Model.CBC_MCV.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_MCH.HasValue ? Model.CBC_MCH.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_MCHC.HasValue ? Model.CBC_MCHC.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_RDW_percent.HasValue ? Model.CBC_RDW_percent.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_PLT.HasValue ? Model.CBC_PLT.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_MPV.HasValue ? Model.CBC_MPV.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Neutrophils_percent.HasValue ? Model.CBC_Neutrophils_percent.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Neutrophils_Absolute.HasValue ? Model.CBC_Neutrophils_Absolute.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Lymphocytes_percent.HasValue ? Model.CBC_Lymphocytes_percent.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Lymphocytes_Absolute.HasValue ? Model.CBC_Lymphocytes_Absolute.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_MonocytesAuto_percent.HasValue ? Model.CBC_MonocytesAuto_percent.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Monocytes_Absolute.HasValue ? Model.CBC_Monocytes_Absolute.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Eosinophils_percent.HasValue ? Model.CBC_Eosinophils_percent.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Eosinophils_Absolute.HasValue ? Model.CBC_Eosinophils_Absolute.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Basophils_percent.HasValue ? Model.CBC_Basophils_percent.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CBC_Basophils_Absolute.HasValue ? Model.CBC_Basophils_Absolute.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Glucose.HasValue ? Model.CMP_Glucose.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_BUN.HasValue ? Model.CMP_BUN.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Creatinine.HasValue ? Model.CMP_Creatinine.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_BUN_CreatinineRatio.HasValue ? Model.CMP_BUN_CreatinineRatio.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Sodium.HasValue ? Model.CMP_Sodium.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Potassium.HasValue ? Model.CMP_Potassium.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Chloride.HasValue ? Model.CMP_Chloride.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_CO2.HasValue ? Model.CMP_CO2.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Calcium.HasValue ? Model.CMP_Calcium.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Protein_Total.HasValue ? Model.CMP_Protein_Total.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Albumin.HasValue ? Model.CMP_Albumin.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Globulin_Serum_Qn_Calc.HasValue ? Model.CMP_Globulin_Serum_Qn_Calc.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_A_G_Ratio.HasValue ? Model.CMP_A_G_Ratio.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_Bilirubin_Total.HasValue ? Model.CMP_Bilirubin_Total.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_AlkalinePhosphatase.HasValue ? Model.CMP_AlkalinePhosphatase.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_AST.HasValue ? Model.CMP_AST.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.CMP_ALT.HasValue ? Model.CMP_ALT.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.LipidPanel_Cholesterol.HasValue ? Model.LipidPanel_Cholesterol.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.LipidPanel_Triglycerides.HasValue ? Model.LipidPanel_Triglycerides.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.LipidPanel_HDL.HasValue ? Model.LipidPanel_HDL.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.LipidPanel_VLDL.HasValue ? Model.LipidPanel_VLDL.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.LipidPanel_LDL.HasValue ? Model.LipidPanel_LDL.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.LipidPanel_CholesterolHDLRatio.HasValue ? Model.LipidPanel_CholesterolHDLRatio.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.LipidPanel_NonHDLCholesterol.HasValue ? Model.LipidPanel_NonHDLCholesterol.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.Magnesium.HasValue ? Model.Magnesium.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.Tacrolimus.HasValue ? Model.Tacrolimus.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.Uric_Acid_Serum.HasValue ? Model.Uric_Acid_Serum.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.Phosphorus_Serum.HasValue ? Model.Phosphorus_Serum.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.PTH_Intact.HasValue ? Model.PTH_Intact.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.VitaminD.HasValue ? Model.VitaminD.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.Cystatin_C_w_EstGFR_Serum.HasValue ? Model.Cystatin_C_w_EstGFR_Serum.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.FreeT4.HasValue ? Model.FreeT4.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.TSH.HasValue ? Model.TSH.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.HgB_A1C.HasValue ? Model.HgB_A1C.Value.ToString("G") : "---")</td>
+
         </tr>
-    }
+    
 </table>
-        
-      
+
+<div style="display: block">
+    <a href="/Test/UpdateTest?date=@Model.Date">Update this Test</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteTest", "Test", "Post"))
+    {
+        <input type="hidden" asp-for="Number" value="@Model.Number" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
+    }
+</div>

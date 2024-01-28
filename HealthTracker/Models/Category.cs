@@ -1,12 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace HealthTracker.Models
+﻿namespace HealthTracker.Models
 {
-    public class Test
+    public class Category
     {
-        public int Number { get; set; }
-        public string? Date { get; set; }
-        public double? CBC_WBC { get; set; }
+        public string Date {  get; set; }
+        public double? CBC_WBC{get; set; }
         public double? CBC_RBC { get; set; }
         public double? CBC_HGB { get; set; }
         public double? CBC_HCT { get; set; }
@@ -60,23 +57,5 @@ namespace HealthTracker.Models
         public double? FreeT4 { get; set; }
         public double? TSH { get; set; }
         public double? HgB_A1C { get; set; }
-        public IEnumerable<Category> Categories { get; set; }
-        public string? DisplayLine(int? value)
-
-        {
-            if (value == null || value == 0)
-            {
-                return "---";
-            }
-            else
-            {
-                return value.ToString();
-            }
-
-        }
     }
 }
-        
-
-
-
