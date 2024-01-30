@@ -2,7 +2,7 @@
 {
     public class Category
     {
-        public string Date {  get; set; }
+        public string? Date {  get; set; }
         public double? CBC_WBC{get; set; }
         public double? CBC_RBC { get; set; }
         public double? CBC_HGB { get; set; }

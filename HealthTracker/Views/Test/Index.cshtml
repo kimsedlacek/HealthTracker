@@ -1,4 +1,7 @@
-﻿@model IEnumerable<Test>
+﻿@using System.Collections.Generic;
+
+
+@model IEnumerable<Test>
 
 <head>
     <link rel="stylesheet" href="StyleSheet.css">
@@ -8,15 +11,15 @@
 <h2>Tests</h2>
 
 <div style="display: block">
-    <a href="/Test/InsertTest/">Create a New Test</a>
+    <a href="/Test/InsertTest/">Input New Test Results</a>
 </div>
 
 <table class="table border-right">
 
     <tr>
       
-        <th class="text-left align-bottom"">Date</th>
         <th class="text-center align-bottom">Number</th>
+        <th class="text-left align-bottom"">Date</th>
 
         <th class="twoLineHeader align-bottom">CBC<br>WBC</th>
         <th class="twoLineHeader align-bottom">CBC<br>RBC</th>
@@ -69,20 +72,23 @@
         <th class="text-center align-bottom">PTH Intact</th>
         <th class="text-center align-bottom">Vitamin D</th>
         <th class="text-center align-bottom">Cystatin C<br>w/EstGFR Serum</th>
-        <th class="text-center align-bottom">Free T4</th>
+        <th class="text-center align-bottom">Free_T4</th>
         <th class="center align-bottom">TSH</th>
         <th class="text-center align-bottom">HgB A1C</th>
         
 
     </tr>
 
+        @{
+            var orderedModel = @Model.OrderByDescending(test => test.Date);
+        }
 
-    @foreach (var test in Model)
+    @foreach (var test in orderedModel)
     {
         <tr>
 
-            <td><a href="/Test/ViewTest?date=@test.Date">@test.Date</a></td>
-            <td>@test.Number</td>
+            <td><a href="/Test/ViewTest?number=@test.Number">@test.Number</a></td>
+            <td id="date-column">@test.Date.ToString("M-d-yy")</td>
             
             <td id="center" style="text-align: center;">@(test.CBC_WBC.HasValue ? test.CBC_WBC.Value.ToString("G") : "---")</td>
             <td id="center" style="text-align: center;">@(test.CBC_RBC.HasValue ? test.CBC_RBC.Value.ToString("G") : "---")</td>
@@ -135,7 +141,7 @@
             <td id="center" style="text-align: center;">@(test.PTH_Intact.HasValue ? test.PTH_Intact.Value.ToString("G") : "---")</td>
             <td id="center" style="text-align: center;">@(test.VitaminD.HasValue ? test.VitaminD.Value.ToString("G") : "---")</td>
             <td id="center" style="text-align: center;">@(test.Cystatin_C_w_EstGFR_Serum.HasValue ? test.Cystatin_C_w_EstGFR_Serum.Value.ToString("G") : "---")</td>
-            <td id="center" style="text-align: center;">@(test.FreeT4.HasValue ? test.FreeT4.Value.ToString("G") : "---")</td>
+            <td id="center" style="text-align: center;">@(test.Free_T4.HasValue ? test.Free_T4.Value.ToString("G") : "---")</td>
             <td id="center" style="text-align: center;">@(test.TSH.HasValue ? test.TSH.Value.ToString("G") : "---")</td>
             <td id="center" style="text-align: center;">@(test.HgB_A1C.HasValue ? test.HgB_A1C.Value.ToString("G") : "---")</td>
             

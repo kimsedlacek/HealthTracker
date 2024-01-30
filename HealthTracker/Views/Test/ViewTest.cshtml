@@ -6,8 +6,9 @@
 
  <table class="table">
     <tr>
-        <th class="text-left align-bottom">Date</th>
+        <th id="date-column" class="text-left align-bottom">Date</th>
         <th class="text-center align-bottom">Number</th>
+
 
         <th class="twoLineHeader align-bottom">CBC<br>WBC</th>
         <th class="twoLineHeader align-bottom">CBC<br>RBC</th>
@@ -67,7 +68,7 @@
     </tr>
 
         <tr>
-        <td>@Model.Date</td>
+        <td>@Model.Date.ToString("M-d-yy")</td>
         <td>@Model.Number</td>
         <td id="center" style="text-align: center;">@(Model.CBC_WBC.HasValue ? Model.CBC_WBC.Value.ToString("G") : "---")</td>
         <td id="center" style="text-align: center;">@(Model.CBC_RBC.HasValue ? Model.CBC_RBC.Value.ToString("G") : "---")</td>
@@ -120,16 +121,36 @@
         <td id="center" style="text-align: center;">@(Model.PTH_Intact.HasValue ? Model.PTH_Intact.Value.ToString("G") : "---")</td>
         <td id="center" style="text-align: center;">@(Model.VitaminD.HasValue ? Model.VitaminD.Value.ToString("G") : "---")</td>
         <td id="center" style="text-align: center;">@(Model.Cystatin_C_w_EstGFR_Serum.HasValue ? Model.Cystatin_C_w_EstGFR_Serum.Value.ToString("G") : "---")</td>
-        <td id="center" style="text-align: center;">@(Model.FreeT4.HasValue ? Model.FreeT4.Value.ToString("G") : "---")</td>
+        <td id="center" style="text-align: center;">@(Model.Free_T4.HasValue ? Model.Free_T4.Value.ToString("G") : "---")</td>
         <td id="center" style="text-align: center;">@(Model.TSH.HasValue ? Model.TSH.Value.ToString("G") : "---")</td>
         <td id="center" style="text-align: center;">@(Model.HgB_A1C.HasValue ? Model.HgB_A1C.Value.ToString("G") : "---")</td>
 
         </tr>
     
-</table>
+        @* <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <!-- Add more header columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="left-column">Row 1</td>
+                <!-- Add more left column cells as needed -->
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <!-- Add more data cells as needed -->
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody> *@
+    </table>
+
+    
+
 
 <div style="display: block">
-    <a href="/Test/UpdateTest?date=@Model.Date">Update this Test</a>
+    <a href="/Test/UpdateTest?Number=@Model.Number">Update this Test</a>
 </div>
 
 <div style="display: block">
@@ -137,6 +158,6 @@
     @using (Html.BeginForm("DeleteTest", "Test", "Post"))
     {
         <input type="hidden" asp-for="Number" value="@Model.Number" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
+        <input type="submit" onclick="return confirm('WARNING: This will DELETE the date and ALL TESTS for that date!')" value="Delete this test" />
     }
 </div>

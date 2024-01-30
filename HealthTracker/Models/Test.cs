@@ -5,7 +5,7 @@ namespace HealthTracker.Models
     public class Test
     {
         public int Number { get; set; }
-        public string? Date { get; set; }
+        public DateTime Date { get; set; }
         public double? CBC_WBC { get; set; }
         public double? CBC_RBC { get; set; }
         public double? CBC_HGB { get; set; }
@@ -57,23 +57,23 @@ namespace HealthTracker.Models
         public double? PTH_Intact { get; set; }
         public double? VitaminD { get; set; }
         public double? Cystatin_C_w_EstGFR_Serum { get; set; }
-        public double? FreeT4 { get; set; }
+        public double? Free_T4 { get; set; }
         public double? TSH { get; set; }
         public double? HgB_A1C { get; set; }
-        public IEnumerable<Category> Categories { get; set; }
-        public string? DisplayLine(int? value)
+        public IEnumerable<Category>? Categories { get; set; }
+        //public string? DisplayLine(int? value)
 
-        {
-            if (value == null || value == 0)
-            {
-                return "---";
-            }
-            else
-            {
-                return value.ToString();
-            }
+        //{
+        //    if (value == null || value == 0)
+        //    {
+        //        return "---";
+        //    }
+        //    else
+        //    {
+        //        return value.ToString();
+        //    }
 
-        }
+        //}
     }
 }
         

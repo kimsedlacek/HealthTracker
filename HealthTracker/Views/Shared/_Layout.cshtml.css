@@ -46,3 +46,30 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+/*table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody {
+    display: block;
+    height: 300px;*/ /* Set a fixed height for the tbody to enable scrolling */
+    /*overflow-y: auto;
+}
+
+.left-column {
+    position: sticky;
+    left: 0;
+    background-color: #f2f2f2;
+}*/
+

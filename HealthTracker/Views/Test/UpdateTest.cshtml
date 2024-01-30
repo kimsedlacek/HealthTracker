@@ -4,11 +4,125 @@
 
 @using (Html.BeginForm("UpdateTestToDatabase", "Test", FormMethod.Post))
 {
+    <input asp-for="Number" type="hidden" value="@Model.Number" />
+
+    <label asp-for="Date" id="date-column" class="control-label">Date</label>
+    <input asp-for="Date" type="text" class="form-control" id="date-column" />
+
+
+
     <label asp-for="CBC_WBC" class="control-label">CBC_WBC</label>
     <input asp-for="CBC_WBC" type="text" class="form-control" />
-
     <label asp-for="CBC_RBC" class="control-label">CBC_RBC</label>
     <input asp-for="CBC_RBC" type="text" class="form-control" />
+    <label asp-for="CBC_HGB" class="control-label">CBC_HGB</label>
+    <input asp-for="CBC_HGB" type="text" class="form-control" />
+    <label asp-for="CBC_HCT" class="control-label">CBC_HCT</label>
+    <input asp-for="CBC_HCT" type="text" class="form-control" />
+    <label asp-for="CBC_MCV" class="control-label">CBC_MCV</label>
+    <input asp-for="CBC_MCV" type="text" class="form-control" />
+    <label asp-for="CBC_MCH" class="control-label">CBC_MCH</label>
+    <input asp-for="CBC_MCH" type="text" class="form-control" />
+    <label asp-for="CBC_MCHC" class="control-label">CBC_MCHC</label>
+    <input asp-for="CBC_MCHC" type="text" class="form-control" />
+    <label asp-for="CBC_RDW_percent" class="control-label">CBC_RDW_percent</label>
+    <input asp-for="CBC_RDW_percent" type="text" class="form-control" />
+    <label asp-for="CBC_PLT" class="control-label">CBC_PLT</label>
+    <input asp-for="CBC_PLT" type="text" class="form-control" />
+    <label asp-for="CBC_MPV" class="control-label">CBC_MPV</label>
+    <input asp-for="CBC_MPV" type="text" class="form-control" />
+    <label asp-for="CBC_Neutrophils_percent" class="control-label">CBC_Neutrophils_percent</label>
+    <input asp-for="CBC_Neutrophils_percent" type="text" class="form-control" />
+    <label asp-for="CBC_Neutrophils_Absolute" class="control-label">CBC_Neutrophils_Absolute</label>
+    <input asp-for="CBC_Neutrophils_Absolute" type="text" class="form-control" />
+    <label asp-for="CBC_Lymphocytes_percent" class="control-label">CBC_Lymphocytes_percent</label>
+    <input asp-for="CBC_Lymphocytes_percent" type="text" class="form-control" />
+    <label asp-for="CBC_Lymphocytes_Absolute" class="control-label">CBC_Lymphocytes_Absolute</label>
+    <input asp-for="CBC_Lymphocytes_Absolute" type="text" class="form-control" />
+    <label asp-for="CBC_MonocytesAuto_percent" class="control-label">CBC_MonocytesAuto_percent</label>
+    <input asp-for="CBC_MonocytesAuto_percent" type="text" class="form-control" />
+    <label asp-for="CBC_Monocytes_Absolute" class="control-label">CBC_Monocytes_Absolute</label>
+    <input asp-for="CBC_Monocytes_Absolute" type="text" class="form-control" />
+    <label asp-for="CBC_Eosinophils_percent" class="control-label">CBC_Eosinophils_percent</label>
+    <input asp-for="CBC_Eosinophils_percent" type="text" class="form-control" />
+    <label asp-for="CBC_Eosinophils_Absolute" class="control-label">CBC_Eosinophils_Absolute</label>
+    <input asp-for="CBC_Eosinophils_Absolute" type="text" class="form-control" />
+    <label asp-for="CBC_Basophils_percent" class="control-label">CBC_Basophils_percent</label>
+    <input asp-for="CBC_Basophils_percent" type="text" class="form-control" />
+    <label asp-for="CBC_Basophils_Absolute" class="control-label">CBC_Basophils_Absolute</label>
+    <input asp-for="CBC_Basophils_Absolute" type="text" class="form-control" />
+
+    <label asp-for="CMP_Glucose" class="control-label">CMP_Glucose</label>
+    <input asp-for="CMP_Glucose" type="text" class="form-control" />
+    <label asp-for="CMP_BUN" class="control-label">CMP_BUN</label>
+    <input asp-for="CMP_BUN" type="text" class="form-control" />
+    <label asp-for="CMP_Creatinine" class="control-label">CMP_Creatinine</label>
+    <input asp-for="CMP_Creatinine" type="text" class="form-control" /> 
+    <label asp-for="CMP_BUN_CreatinineRatio" class="control-label">CMP_BUN_CreatinineRatio</label>
+    <input asp-for="CMP_BUN_CreatinineRatio" type="text" class="form-control" />  
+    <label asp-for="CMP_Sodium" class="control-label">CMP_Sodium</label>
+    <input asp-for="CMP_Sodium" type="text" class="form-control" /> 
+    <label asp-for="CMP_Potassium" class="control-label">CMP_Potassium</label>
+    <input asp-for="CMP_Potassium" type="text" class="form-control" />  
+    <label asp-for="CMP_Chloride" class="control-label">CMP_Chloride</label>
+    <input asp-for="CMP_Chloride" type="text" class="form-control" /> 
+    <label asp-for="CMP_CO2" class="control-label">CMP_CO2</label>
+    <input asp-for="CMP_CO2" type="text" class="form-control" />
+    <label asp-for="CMP_Calcium" class="control-label">CMP_Calcium</label>
+    <input asp-for="CMP_Calcium" type="text" class="form-control" /> 
+    <label asp-for="CMP_Protein_Total" class="control-label">CMP_Protein_Total</label>
+    <input asp-for="CMP_Protein_Total" type="text" class="form-control" />
+    <label asp-for="CMP_Albumin" class="control-label">CMP_Albumin</label>
+    <input asp-for="CMP_Albumin" type="text" class="form-control" />
+    <label asp-for="CMP_Globulin_Serum_Qn_Calc" class="control-label">CMP_Globulin_Serum_Qn_Calc</label>
+    <input asp-for="CMP_Globulin_Serum_Qn_Calc" type="text" class="form-control" />
+    <label asp-for="CMP_A_G_Ratio" class="control-label">CMP_A_G_Ratio</label>
+    <input asp-for="CMP_A_G_Ratio" type="text" class="form-control" />
+    <label asp-for="CMP_Bilirubin_Total" class="control-label">CMP_Bilirubin_Total</label>
+    <input asp-for="CMP_Bilirubin_Total" type="text" class="form-control" />
+    <label asp-for="CMP_AlkalinePhosphatase" class="control-label">CMP_AlkalinePhosphatase</label>
+    <input asp-for="CMP_AlkalinePhosphatase" type="text" class="form-control" />
+    <label asp-for="CMP_AST" class="control-label">CMP_AST</label>
+    <input asp-for="CMP_AST" type="text" class="form-control" />
+    <label asp-for="CMP_ALT" class="control-label">CMP_ALT</label>
+    <input asp-for="CMP_ALT" type="text" class="form-control" />
+
+    <label asp-for="LipidPanel_Cholesterol" class="control-label">LipidPanel_Cholesterol</label>
+    <input asp-for="LipidPanel_Cholesterol" type="text" class="form-control" />
+    <label asp-for="LipidPanel_Triglycerides" class="control-label">LipidPanel_Triglycerides</label>
+    <input asp-for="LipidPanel_Triglycerides" type="text" class="form-control" />
+    <label asp-for="LipidPanel_HDL" class="control-label">LipidPanel_HDL</label>
+    <input asp-for="LipidPanel_HDL" type="text" class="form-control" />
+    <label asp-for="LipidPanel_VLDL" class="control-label">LipidPanel_VLDL</label>
+    <input asp-for="LipidPanel_VLDL" type="text" class="form-control" />
+    <label asp-for="LipidPanel_LDL" class="control-label">LipidPanel_LDL</label>
+    <input asp-for="LipidPanel_LDL" type="text" class="form-control" />
+    <label asp-for="LipidPanel_CholesterolHDLRatio" class="control-label">LipidPanel_CholesterolHDLRatio</label>
+    <input asp-for="LipidPanel_CholesterolHDLRatio" type="text" class="form-control" />
+    <label asp-for="LipidPanel_NonHDLCholesterol" class="control-label">LipidPanel_NonHDLCholesterol</label>
+    <input asp-for="LipidPanel_NonHDLCholesterol" type="text" class="form-control" />
+
+    <label asp-for="Magnesium" class="control-label">Magnesium</label>
+    <input asp-for="Magnesium" type="text" class="form-control" />
+    <label asp-for="Tacrolimus" class="control-label">Tacrolimus</label>
+    <input asp-for="Tacrolimus" type="text" class="form-control" />
+    <label asp-for="Uric_Acid_Serum" class="control-label">Uric_Acid_Serum</label>
+    <input asp-for="Uric_Acid_Serum" type="text" class="form-control" />
+    <label asp-for="Phosphorus_Serum" class="control-label">Phosphorus_Serum</label>
+    <input asp-for="Phosphorus_Serum" type="text" class="form-control" />
+    <label asp-for="PTH_Intact" class="control-label">PTH_Intact</label>
+    <input asp-for="PTH_Intact" type="text" class="form-control" />
+    <label asp-for="VitaminD" class="control-label">VitaminD</label>
+    <input asp-for="VitaminD" type="text" class="form-control" />
+    <label asp-for="Cystatin_C_w_EstGFR_Serum" class="control-label">Cystatin_C_w_EstGFR_Serum</label>
+    <input asp-for="Cystatin_C_w_EstGFR_Serum" type="text" class="form-control" />
+    <label asp-for="Free_T4" class="control-label">Free_T4</label>
+    <input asp-for="Free_T4" type="text" class="form-control" />
+    <label asp-for="TSH" class="control-label">TSH</label>
+    <input asp-for="TSH" type="text" class="form-control" />
+    <label asp-for="HgB_A1C" class="control-label">HgB_A1C</label>
+    <input asp-for="HgB_A1C" type="text" class="form-control" />
+
 
     <input type="submit" value="Update Test" class="btn btn-primary" />
     <input asp-for="Number" type="hidden" />

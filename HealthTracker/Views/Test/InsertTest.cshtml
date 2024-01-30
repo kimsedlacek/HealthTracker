@@ -8,23 +8,131 @@
     <input asp-for="Number" type="hidden" value=""/>
     
    // <div class="form-group">
-    <label asp-for="Date" class="control-label">Date</label>
-    <input type="text" name="Date" class="form-control" value=""/>
+    <label asp-for="Date" id="date-column-label" class="control-label">Date</label>
+    <input asp-for="Date" type="text" id="date-column-input" class="form-control" value="" oninput="updateValue(this)" />
+
    // </div>
     <label asp-for="CBC_WBC" class="control-label">CBC_WBC</label>
-    <input type="number"  name="CBC_WBC" class="form-control" />
+    <input type="text" name="CBC_WBC" class="form-control" value="" oninput="updateValue(this)"/>
+    <label asp-for="CBC_RBC" class="control-label">CBC_RBC</label>
+    <input type="text" name="CBC_RBC" class="form-control" value="" oninput="updateValue(this)"/>
+    <label asp-for="CBC_HGB" class="control-label">CBC_HGB</label>
+    <input type="text" name="CBC_HGB" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_HCT" class="control-label">CBC_HCT</label>
+    <input type="text" name="CBC_HCT" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_MCV" class="control-label">CBC_MCV</label>
+    <input type="text" name="CBC_MCV" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_MCH" class="control-label">CBC_MCH</label>
+    <input type="text" name="CBC_MCH" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_MCHC" class="control-label">CBC_MCHC</label>
+    <input type="text" name="CBC_MCHC" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_RDW_percent" class="control-label">CBC_RDW%</label>
+    <input type="text" name="CBC_RDW_percent" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_PLT" class="control-label">CBC_PLT</label>
+    <input type="text" name="CBC_PLT" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_MPV" class="control-label">CBC_MPV</label>
+    <input type="text" name="CBC_MPV" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Neutrophils_percent" class="control-label">CBC_Neutrophils%</label>
+    <input type="text" name="CBC_Neutrophils_percent" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Neutrophils_Absolute" class="control-label">CBC_Neutrophils_Absolute</label>
+    <input type="text" name="CBC_Neutrophils_Absolute" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Lymphocytes_percent" class="control-label">CBC_Lymphocytes%</label>
+    <input type="text" name="CBC_Lymphocytes_percent" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Lymphocytes_Absolute" class="control-label">CBC_LymphocytesAbsolute</label>
+    <input type="text" name="CBC_Lymphocytes_Absolute" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_MonocytesAuto_percent" class="control-label">CBC_Monocytes Auto%</label>
+    <input type="text" name="CBC_MonocytesAuto_percent" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Monocytes_Absolute" class="control-label">CBC_Monocytes Absolute</label>
+    <input type="text" name="CBC_Monocytes_Absolute" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Eosinophils_percent" class="control-label">CBC Eosinophils%</label>
+    <input type="text" name="CBC_Eosinophils_percent" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Eosinophils_Absolute" class="control-label">CBC_Eosinophils Absolute</label>
+    <input type="text" name="CBC_Eosinophils_Absolute" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Basophils_percent" class="control-label">CBC_Basophils%</label>
+    <input type="text" name="CBC_Basophils_percent" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CBC_Basophils_Absolute" class="control-label">CBC_Basophils Absolute</label>
+    <input type="text" name="CBC_Basophils_Absolute" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Glucose" class="control-label">CMP_Glucose</label>
+    <input type="text" name="CMP_Glucose" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_BUN" class="control-label">CMP BUN</label>
+    <input type="text" name="CMP_BUN" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Creatinine" class="control-label">CMP Creatinine</label>
+    <input type="text" name="CMP_Creatinine" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_BUN_CreatinineRatio" class="control-label">CMP BUN Creatinine Ratio</label>
+    <input type="text" name="CMP_BUN_CreatinineRatio" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Sodium" class="control-label">CMP Sodium</label>
+    <input type="text" name="CMP_Sodium" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Potassium" class="control-label">CMP Potassium</label>
+    <input type="text" name="CMP_Potassium" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Chloride" class="control-label">CMP Chloride</label>
+    <input type="text" name="CMP_Chloride" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_CO2" class="control-label">CMP CO2</label>
+    <input type="text" name="CMP_CO2" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Calcium" class="control-label">CMP Calcium</label>
+    <input type="text" name="CMP_Calcium" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Protein_Total" class="control-label">CMP Ttl. Protein</label>
+    <input type="text" name="CMP_Protein_Total" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Albumin" class="control-label">CMP Albumin</label>
+    <input type="text" name="CMP_Albumin" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Globulin_Serum_Qn_Calc" class="control-label">CMP GlobulinSerumQnCalc</label>
+    <input type="text" name="CMP_Globulin_Serum_Qn_Calc" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_A_G_Ratio" class="control-label">CMP A/G Ratio</label>
+    <input type="text" name="CMP_A_G_Ratio" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_Bilirubin_Total" class="control-label">CMP Bilirubin</label>
+    <input type="text" name="CMP_Bilirubin_Total" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_AlkalinePhosphatase" class="control-label">CMP Alkaline Phosphatase</label>
+    <input type="text" name="CMP_AlkalinePhosphatase" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_AST" class="control-label">CMP AST</label>
+    <input type="text" name="CMP_AST" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="CMP_ALT" class="control-label">CMP ALT</label>
+    <input type="text" name="CMP_ALT" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="LipidPanel_Cholesterol" class="control-label">Lipid Panel Cholesterol</label>
+    <input type="text" name="LipidPanel_Cholesterol" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="LipidPanel_Triglycerides" class="control-label">Lipid Panel Triglycerides</label>
+    <input type="text" name="LipidPanel_Triglycerides" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="LipidPanel_HDL" class="control-label">Lipid Panel HDL</label>
+    <input type="text" name="LipidPanel_HDL" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="LipidPanel_VLDL" class="control-label">Lipid Panel VLDL</label>
+    <input type="text" name="LipidPanel_VLDL" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="LipidPanel_LDL" class="control-label">Lipid Panel LDL</label>
+    <input type="text" name="LipidPanel_LDL" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="LipidPanel_CholesterolHDLRatio" class="control-label">Lipid Panel Cholesterol HDL Ratio</label>
+    <input type="text" name="LipidPanel_CholesterolHDLRatio" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="LipidPanel_NonHDLCholesterol" class="control-label">Lipid Panel Non HDL Cholesterol</label>
+    <input type="text" name="LipidPanel_NonHDLCholesterol" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="Magnesium" class="control-label">Magnesium </label>
+    <input type="text" name="Magnesium" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="Tacrolimus" class="control-label">Tacrolimus </label>
+    <input type="text" name="Tacrolimus" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="Uric_Acid_Serum" class="control-label">Uric Acid Serum </label>
+    <input type="text" name="Uric_Acid_Serum" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="Phosphorus_Serum" class="control-label">Phosphorus Serum </label>
+    <input type="text" name="Phosphorus_Serum" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="PTH_Intact" class="control-label">PTH Intact</label>
+    <input type="text" name="PTH_Intact" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="VitaminD" class="control-label">VitaminD</label>
+    <input type="text" name="VitaminD" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="Cystatin_C_w_EstGFR_Serum" class="control-label">Cystatin C w/Est GFR Serum</label>
+    <input type="text" name="Cystatin_C_w_EstGFR_Serum" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="Free_T4" class="control-label">Free_T4</label>
+    <input type="text" name="Free_T4" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="TSH" class="control-label">TSH</label>
+    <input type="text" name="TSH" class="form-control" value="" oninput="updateValue(this)" />
+    <label asp-for="HgB_A1C" class="control-label">HGB A1C</label>
+    <input type="text" name="HGB_A1C" class="form-control" value="" oninput="updateValue(this)" />
 
-    <div class="form-group">
-        <label for="">Select a Category</label>
+
+    @* <div class="form-group">
+        <label for="">Select a Test</label>
         <select class="form-control" name="CBC_RBC" value="">
             @foreach (var cat in Model.Categories)
             {
                 <option value="@cat.CBC_RBC">@cat.CBC_RBC @cat.Date</option>
             }
         </select>
-    </div>
+    </div> *@
 
-    <input type="submit" value="Create Test" class="btn btn-primary" />
+    <input type="submit" value="Log Tests" class="btn btn-primary" />
 }
 
 
@@ -39,7 +147,7 @@
         <button type="submit" name="TestType" value="Lipid Panel" class="btn btn-primary">Lipid Panel</button>
         <button type="submit" name="TestType" value="Other" class="btn btn-primary">Other</button>
     </div>
-}
+
 
 
 

@@ -17,15 +17,15 @@ namespace HealthTracker.Controllers
             var tests = _testRepository.GetAllTests();
             return View(tests);
         }
-        public IActionResult ViewTest(string Date)
+        public IActionResult ViewTest(int number)
         {
-            var test = _testRepository.GetTest(Date);
+            var test = _testRepository.GetTest(number);
             return View(test);
         }
 
-        public IActionResult UpdateTest(string Date)
+        public IActionResult UpdateTest(int number)
         {
-            Test bw = _testRepository.GetTest(Date);
+            Test bw = _testRepository.GetTest(number);
             if (bw == null)
             {
                 return View("ProductNotFound");
@@ -39,10 +39,10 @@ namespace HealthTracker.Controllers
 
             return RedirectToAction("Index");
         }
-        public IActionResult InsertTest()
+        public IActionResult InsertTest(Test test)
         {
-            var testTypes = _testRepository.AssignCategory();
-            return View(testTypes);
+            //var testTypes = _testRepository.AssignCategory();
+            return View(test);
 
             //var testTypes = new List<string> { "CBC", "CMP", "Lipid Panel", "Other" };
 
