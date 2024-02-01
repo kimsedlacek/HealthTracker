@@ -1,10 +1,8 @@
 html {
-  font-size: 10px;
-  max-width: 200vw;
-  overflow-x: hidden;
+  font-size: 14px;
 }
 
-@media (min-width: 50px) {
+@media (min-width: 768px) {
   html {
     font-size: 16px;
   }
@@ -21,15 +19,11 @@ html {
 
 body {
   margin-bottom: 60px;
-
-}
-h1, h2{
-    color: steelblue ;
 }
 
-h3{
+h4{
     
-    color:cadetblue;
+    color:lightblue;
 }
 
 .twoLineHeader {
@@ -87,6 +81,11 @@ button.accept-policy {
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
+}
+
+.table-container {
+    overflow: auto;
+    height: 300px; /* Set a fixed height for the container to enable scrolling */
 }
 
 #data-table {
@@ -153,51 +152,29 @@ button.accept-policy {
     line-height: 60px;
 }
 
+.table-container {
+    overflow: auto;
+    height: 300px;
+}
+
 #data-table {
     border-collapse: collapse;
 }
 
 
-.table-container {
-    position: relative;
-    overflow-x: scroll;
-    max-width: 95vw;
-    max-height: 60vh;
-    margin: auto;
-}
-
-
-tbody {
-    z-index: 1;
-}
-
-thead {
+thead tr {
     background: black !important;
     position: sticky;
     top: 0;
-    color:white;
-    z-index: 300;
-}
-
-td:first-child {
-    background: #f2f2f2;
-}
-
-td:first-child, th:first-child {
-    position: sticky;
     left: 0;
-    
+    color:white
 }
 
-td:first-child {
-    z-index: 200;
-}
-th:first-child {
-    z-index: 400;
-    background: white;
-    color: black;
-  
-}
+.cell-fixed-left {
+    /* position: sticky !important; */
+    z-index: 2;
+    background: #f2f2f2;
+}  
 
 .fixed{
 
@@ -207,23 +184,3 @@ th:first-child {
     position: relative;
     border-collapse: collapse;
 }
-th, td{
-    font-size: 10px;
-}
-
-
-body {
-    margin: 0px;
-    padding: 0px;
-}
-.background{
-    width: 100%;
-    height: 100%;
-    background-image: url("../Images/HealthTrackerBackgroundHearts.png");
-    background-size: cover; 
-    background-position: center;
-}
-
-
-
-

@@ -1,39 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - HealthTracker</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/HealthTracker.styles.css" asp-append-version="true" />
-
-     <style>
-        #date-column {
-            white-space: nowrap; /* Prevent text from wrapping to the next line */
-            width: 150px; }
-    </style>                       @* /* Set the desired width for the column */ *@
-       @* 
-        .navbar {
-            background-color: black;
-            color: white;
-        }
-        body {
-            background-color: black;
-        }
-        navbar-brand {
-            background-color: black;
-        }
-        navbar-toggler {
-            background-color: black;
-        }
-     *@
-   
- 
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap">
 </head>
+
 <body>
-
-
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -60,7 +38,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+    @RenderBody()
         </main>
     </div>
 
@@ -73,5 +51,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+ 
+    
 </body>
 </html>
