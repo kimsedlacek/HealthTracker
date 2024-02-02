@@ -42,7 +42,7 @@ h2 {
 h3 {
   
     color: darkred;
-    background-color: lightblue;
+    background-color: azure;
     margin: 0;
     text-align: center;
     white-space: nowrap;

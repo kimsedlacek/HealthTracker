@@ -5,11 +5,11 @@
 
 <head>
 </head>
-
+<body>
 
 <h2>Tests</h2>
 
-<div style="display: block">
+<div style="display: block; background-color: lightblue;color: darkred">
     <a href="/Test/InsertTest/">Input New Test Results</a>
 </div>
 
@@ -78,6 +78,8 @@
         </tr>
     </thead>
 
+
+
         @{
             var orderedModel = @Model.OrderByDescending(test => test.Date);
         }
@@ -88,7 +90,7 @@
         <tr>
 
             <td>
-                <div style="width: 50px;">
+                <div style="width: 70px;">
                     <a href="/Test/ViewTest?number=@test.Number">@test.Number</a><br>@test.Date.ToString("M-d-yy")
                 </div>
             </td>
@@ -159,4 +161,5 @@
 </table>
 </div>
 
+</body>
 

@@ -1,11 +1,12 @@
 ﻿@model Test
 
-<h3 id="date-column">@Model.Date</h3>
+<h3 id="date-column">@Model.Date.ToString("M-d-yy")</h3>
 
 
 <!-- The Headers for the Tests when viewed as one single test-->
-
+<div class="table-container">
  <table class="table">
+     <thead>
     <tr class="fixed" id="test-table">
         <th id="date-column" class="text-left align-bottom">Date</th>
         <th class="text-center align-bottom">Number</th>
@@ -67,9 +68,10 @@
         <th class="text-center align-bottom">HgB A1C</th>
 
     </tr>
-
+    </thead>
+    <tbody>
         <tr>
-        <td id="date-column">@Model.Date.ToString("M-d-yy")</td>
+        <td class="left-column" id="date-column">@Model.Date.ToString("M-d-yy")</td>
         <td>@Model.Number</td>
         <td id="center" style="text-align: center;">@(Model.CBC_WBC.HasValue ? Model.CBC_WBC.Value.ToString("G") : "---")</td>
         <td id="center" style="text-align: center;">@(Model.CBC_RBC.HasValue ? Model.CBC_RBC.Value.ToString("G") : "---")</td>
@@ -127,9 +129,10 @@
         <td id="center" style="text-align: center;">@(Model.HgB_A1C.HasValue ? Model.HgB_A1C.Value.ToString("G") : "---")</td>
 
         </tr>
-    
+    </tbody>
  
     </table>
+</div>
 
     
 

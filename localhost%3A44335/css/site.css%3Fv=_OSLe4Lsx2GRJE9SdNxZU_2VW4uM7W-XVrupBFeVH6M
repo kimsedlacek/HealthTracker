@@ -130,7 +130,7 @@ a.navbar-brand {
 }
 
 a {
-    color: darkred;
+    color: lightblue;
 }
 
 .btn-primary {

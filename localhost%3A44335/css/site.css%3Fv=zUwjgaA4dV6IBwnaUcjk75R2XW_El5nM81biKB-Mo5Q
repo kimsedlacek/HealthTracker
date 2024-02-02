@@ -42,7 +42,7 @@ h2 {
 h3 {
   
     color: darkred;
-    background-color: lightblue;
+    background-color: azure;
     margin: 0;
     text-align: center;
     white-space: nowrap;
@@ -70,14 +70,14 @@ a {
 }
 
 .btn-primary {
-    color: darkred;
-    background-color: lightblue;
+    color: #fff;
+    background-color: #1b6ec2;
     border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: darkred;
-    background-color: lightblue;
+    background-color: #1b6ec2;
     border-color: #1861ac;
 }
 
@@ -114,7 +114,7 @@ button.accept-policy {
 .left-column {
     position: sticky;
     left: 0;
-    background-color: lightblue;
+    background-color: #f2f2f2;
 }
 
 
@@ -140,7 +140,7 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: darkred;
+    color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
@@ -184,7 +184,7 @@ button.accept-policy {
     margin: auto;
 }
 table {
-    background: lightblue;
+    background: azure;
 }
 
 
@@ -201,7 +201,7 @@ thead {
 }
 
 td:first-child {
-    background: lightblue;
+    background: #f2f2f2;
 }
 
 td:first-child, th:first-child {
@@ -240,7 +240,7 @@ td{
 body {
     margin: 0px;
     padding: 0px;
-    background-color: lightblue;
+    background-color: lightgray;
 }
 .body-bg{
     width: 100%;
